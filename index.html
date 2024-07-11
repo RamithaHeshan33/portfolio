@@ -16,6 +16,86 @@
     <!-- Flowbite CSS -->
     <link href="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.css" rel="stylesheet">
 
+    <style>
+      .content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+      }
+
+      .card {
+          display: flex;
+          text-align: justify;
+          background-color: white;
+          border: 1px solid #e5e7eb;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          max-width: 1200px;
+          margin: auto;
+          overflow: hidden;
+      }
+
+      .card img {
+          /* width: 100%; */
+          height: auto;
+      }
+
+      .card-body {
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          gap: 20px;
+      }
+
+      .card-body h5 {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #1f2937;
+      }
+
+      .card-body p {
+          color: #4b5563;
+      }
+
+      .button-group {
+          display: flex;
+          gap: 10px;
+      }
+
+      .button-group a {
+          display: flex;
+          align-items: center;
+          padding: 10px 20px;
+          font-size: 0.875rem;
+          font-weight: medium;
+          color: white;
+          border-radius: 6px;
+      }
+
+      .button-group a.sourcecode {
+          background-color: #3b82f6;
+      }
+
+      .button-group a.sourcecode:hover {
+          background-color: #2563eb;
+      }
+
+      .button-group a.demo {
+          background-color: #374151;
+      }
+
+      .button-group a.demo:hover {
+          background-color: #1f2937;
+      }
+
+      .button-group svg {
+          margin-right: 10px;
+      }
+  </style>
+
+
 </head>
 <body>
     <!-- Navbar -->
@@ -35,19 +115,19 @@
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <a href="#home" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+              <a href="#home" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
             </li>
             <li>
-              <a href="#about" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+              <a href="#about" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
             </li>
             <li>
-              <a href="#projects" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+              <a href="#projects" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
             </li>
             <li>
-              <a href="#blogs" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blogs</a>
+              <a href="#blogs" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blogs</a>
             </li>
             <li>
-              <a href="#contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+              <a href="#contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
             </li>
           </ul>
         </div>
@@ -73,7 +153,11 @@
             <span>Hello, I'm</span>
             <h1 class="font-bold">Ramitha Heshan</h1>  
             
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam distinctio iure animi natus obcaecati, reprehenderit numquam nobis eaque commodi veritatis illum, quaerat dolores eum nostrum ex? Inventore veritatis debitis recusandae!</p>
+            <p>
+              Welcome to my portfolio, a showcase of my journey as a dedicated undergraduate. Here, you will find projects that 
+              highlight my skills and expertise. Each project provides insight into my unique approach, leadership, and unwavering commitment. 
+              Thank you for visiting!
+            </p>
 
             <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
               <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
@@ -97,12 +181,17 @@
               <img src="dp14.png" alt="">
           </div>
           <div class="about-text">
-              <p>I am a student in ICBT campus for doing the computing and software engineering degree in Cardiff Metropolitan University (UK). And I have completed a diploma that Psycology and Counseling in SITC campus (Science and Information Technology Campus).</p>
+              <p>
+                I am currently an undergraduate student at ICBT Campus, working towards a degree in Computing and Software Engineering from 
+                Cardiff Metropolitan University (UK). In addition to my technical pursuits, I hold a diploma in Psychology and Counseling 
+                from the Science and Information Technology Campus (SITC).
+              </p>
               <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                <a href="#portfolio">Download CV</a>
+                  <a href="CV.pdf" download="CV.pdf">Download CV</a>
                 </span>
               </button>
+              
           </div>
       </div>
     </section>
@@ -119,79 +208,100 @@
 
       
       
-        <div class="content mt-7">
-          <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row w-full hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-full h-full md:w-1/2 md:h-full rounded-t-lg md:rounded-none md:rounded-s-lg" src="main.jpg" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal w-full md:ml-8">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-              <div class="flex space-x-4">
-                <button class="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
-                  <svg class="w-5 h-5 mr-2" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 .198a8 8 0 00-2.53 15.61c.4.07.547-.173.547-.386 0-.19-.007-.693-.01-1.36-2.225.483-2.695-1.072-2.695-1.072-.364-.922-.89-1.167-.89-1.167-.728-.498.055-.488.055-.488.805.057 1.228.827 1.228.827.715 1.224 1.874.87 2.33.665.072-.518.28-.87.51-1.07-1.777-.2-3.644-.888-3.644-3.956 0-.874.313-1.588.823-2.148-.082-.202-.357-1.017.077-2.12 0 0 .67-.215 2.195.82a7.626 7.626 0 012-.27 7.63 7.63 0 012 .27c1.525-1.035 2.195-.82 2.195-.82.434 1.103.16 1.918.078 2.12.512.56.823 1.274.823 2.148 0 3.075-1.87 3.753-3.654 3.948.287.25.543.737.543 1.485 0 1.07-.01 1.933-.01 2.197 0 .213.146.463.55.384A8.001 8.001 0 008 .198z"></path>
-                  </svg>
-                  Sourcecode
-                </button>
-                <button class="flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-gray-200 rounded-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-500">
-                  <svg class="w-5 h-5 mr-2" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.498 6.186c-.273-.993-1.077-1.777-2.064-2.064C19.464 3.747 12 3.747 12 3.747s-7.464 0-9.434.375C1.58 4.51.776 5.293.503 6.286.131 7.916 0 12 0 12s.131 4.084.503 5.713c.273.993 1.077 1.777 2.064 2.064 1.97.375 9.434.375 9.434.375s7.464 0 9.434-.375c.987-.287 1.791-1.071 2.064-2.064C23.869 16.084 24 12 24 12s-.131-4.084-.502-5.714zm-14.65 9.61V8.204l6.416 3.796-6.416 3.796z"></path>
-                  </svg>
-                  Demo
-                </button>
+        <div class="content">
+          <div class="card">
+              <img src="./project1/banner.jpg" alt="Banner Image">
+              <div class="card-body">
+                  <h5>Student Management System</h5>
+                  <p>
+                    Introducing the Student Management System of the ABC campus. Actually, we built this system as a retrofit to our 
+                    existing university SIS. In fact, we used the PHP stack to develop this entire project. Which means HTML, CSS, and 
+                    JavaScript for the front end, PHP for the back end, and MySql for the database.
+                  </p>
+
+                  <h5>Key Features</h5>
+                  <ul>
+                    <li>Automated VIVA Section</li>
+                    <li>Live Search Option</li>
+                    <li>Responsive UI</li>
+                  </ul>
+                  
+                  <div class="button-group">
+                      <a href="https://github.com/Cyber-III/Student-Management-System" target="_blank" class="sourcecode">
+                          <svg class="w-5 h-5" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8 .198a8 8 0 00-2.53 15.61c.4.07.547-.173.547-.386 0-.19-.007-.693-.01-1.36-2.225.483-2.695-1.072-2.695-1.072-.364-.922-.89-1.167-.89-1.167-.728-.498.055-.488.055-.488.805.057 1.228.827 1.228.827.715 1.224 1.874.87 2.33.665.072-.518.28-.87.51-1.07-1.777-.2-3.644-.888-3.644-3.956 0-.874.313-1.588.823-2.148-.082-.202-.357-1.017.077-2.12 0 0 .67-.215 2.195.82a7.626 7.626 0 012-.27 7.63 7.63 0 012 .27c1.525-1.035 2.195-.82 2.195-.82.434 1.103.16 1.918.078 2.12.512.56.823 1.274.823 2.148 0 3.075-1.87 3.753-3.654 3.948.287.25.543.737.543 1.485 0 1.07-.01 1.933-.01 2.197 0 .213.146.463.55.384A8.001 8.001 0 008 .198z"></path>
+                          </svg>
+                          Sourcecode
+                      </a>
+                      <a href="" target="_blank" class="demo">
+                          <svg class="w-5 h-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M23.498 6.186c-.273-.993-1.077-1.777-2.064-2.064C19.464 3.747 12 3.747 12 3.747s-7.464 0-9.434.375C1.58 4.51.776 5.293.503 6.286.131 7.916 0 12 0 12s.131 4.084.503 5.713c.273.993 1.077 1.777 2.064 2.064 1.97.375 9.434.375 9.434.375s7.464 0 9.434-.375c.987-.287 1.791-1.071 2.064-2.064C23.869 16.084 24 12 24 12s-.131-4.084-.502-5.714zm-14.65 9.61V8.204l6.416 3.796-6.416 3.796z"></path>
+                          </svg>
+                          Demo
+                      </a>
+                  </div>
               </div>
-            </div>
-          </a>
-        </div>
+          </div>
+      </div>
         
         
 
-        <div class="content mt-7">
-          <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row w-full hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-full h-full md:w-1/2 md:h-full rounded-t-lg md:rounded-none md:rounded-s-lg" src="main.jpg" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal w-full md:ml-8">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-              <div class="flex space-x-4">
-                <button class="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
-                  <svg class="w-5 h-5 mr-2" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 .198a8 8 0 00-2.53 15.61c.4.07.547-.173.547-.386 0-.19-.007-.693-.01-1.36-2.225.483-2.695-1.072-2.695-1.072-.364-.922-.89-1.167-.89-1.167-.728-.498.055-.488.055-.488.805.057 1.228.827 1.228.827.715 1.224 1.874.87 2.33.665.072-.518.28-.87.51-1.07-1.777-.2-3.644-.888-3.644-3.956 0-.874.313-1.588.823-2.148-.082-.202-.357-1.017.077-2.12 0 0 .67-.215 2.195.82a7.626 7.626 0 012-.27 7.63 7.63 0 012 .27c1.525-1.035 2.195-.82 2.195-.82.434 1.103.16 1.918.078 2.12.512.56.823 1.274.823 2.148 0 3.075-1.87 3.753-3.654 3.948.287.25.543.737.543 1.485 0 1.07-.01 1.933-.01 2.197 0 .213.146.463.55.384A8.001 8.001 0 008 .198z"></path>
-                  </svg>
-                  Sourcecode
-                </button>
-                <button class="flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-gray-200 rounded-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-500">
-                  <svg class="w-5 h-5 mr-2" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.498 6.186c-.273-.993-1.077-1.777-2.064-2.064C19.464 3.747 12 3.747 12 3.747s-7.464 0-9.434.375C1.58 4.51.776 5.293.503 6.286.131 7.916 0 12 0 12s.131 4.084.503 5.713c.273.993 1.077 1.777 2.064 2.064 1.97.375 9.434.375 9.434.375s7.464 0 9.434-.375c.987-.287 1.791-1.071 2.064-2.064C23.869 16.084 24 12 24 12s-.131-4.084-.502-5.714zm-14.65 9.61V8.204l6.416 3.796-6.416 3.796z"></path>
-                  </svg>
-                  Demo
-                </button>
-              </div>
+      <div class="content">
+        <div class="card">
+            <img src="./project1/banner.jpg" alt="Banner Image">
+            <div class="card-body">
+                <h5>Student Management System</h5>
+                <p>
+                  Introducing the Student Management System of the ABC campus. Actually, we built this system as a retrofit to our existing 
+                  university SIS. In fact, we used the PHP stack to develop this entire project. Which means HTML, CSS, and JavaScript for 
+                  the front end, PHP for the back end, and MySql for the database.
+                </p>
+                <div class="button-group">
+                    <a href="https://github.com/Cyber-III/Student-Management-System" target="_blank" class="sourcecode">
+                        <svg class="w-5 h-5" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 .198a8 8 0 00-2.53 15.61c.4.07.547-.173.547-.386 0-.19-.007-.693-.01-1.36-2.225.483-2.695-1.072-2.695-1.072-.364-.922-.89-1.167-.89-1.167-.728-.498.055-.488.055-.488.805.057 1.228.827 1.228.827.715 1.224 1.874.87 2.33.665.072-.518.28-.87.51-1.07-1.777-.2-3.644-.888-3.644-3.956 0-.874.313-1.588.823-2.148-.082-.202-.357-1.017.077-2.12 0 0 .67-.215 2.195.82a7.626 7.626 0 012-.27 7.63 7.63 0 012 .27c1.525-1.035 2.195-.82 2.195-.82.434 1.103.16 1.918.078 2.12.512.56.823 1.274.823 2.148 0 3.075-1.87 3.753-3.654 3.948.287.25.543.737.543 1.485 0 1.07-.01 1.933-.01 2.197 0 .213.146.463.55.384A8.001 8.001 0 008 .198z"></path>
+                        </svg>
+                        Sourcecode
+                    </a>
+                    <a href="" target="_blank" class="demo">
+                        <svg class="w-5 h-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.498 6.186c-.273-.993-1.077-1.777-2.064-2.064C19.464 3.747 12 3.747 12 3.747s-7.464 0-9.434.375C1.58 4.51.776 5.293.503 6.286.131 7.916 0 12 0 12s.131 4.084.503 5.713c.273.993 1.077 1.777 2.064 2.064 1.97.375 9.434.375 9.434.375s7.464 0 9.434-.375c.987-.287 1.791-1.071 2.064-2.064C23.869 16.084 24 12 24 12s-.131-4.084-.502-5.714zm-14.65 9.61V8.204l6.416 3.796-6.416 3.796z"></path>
+                        </svg>
+                        Demo
+                    </a>
+                </div>
             </div>
-          </a>
         </div>
+      </div>
         
-        <div class="content mt-7">
-          <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row w-full hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-full h-full md:w-1/2 md:h-full rounded-t-lg md:rounded-none md:rounded-s-lg" src="main.jpg" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal w-full md:ml-8">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-              <div class="flex space-x-4">
-                <button class="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
-                  <svg class="w-5 h-5 mr-2" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 .198a8 8 0 00-2.53 15.61c.4.07.547-.173.547-.386 0-.19-.007-.693-.01-1.36-2.225.483-2.695-1.072-2.695-1.072-.364-.922-.89-1.167-.89-1.167-.728-.498.055-.488.055-.488.805.057 1.228.827 1.228.827.715 1.224 1.874.87 2.33.665.072-.518.28-.87.51-1.07-1.777-.2-3.644-.888-3.644-3.956 0-.874.313-1.588.823-2.148-.082-.202-.357-1.017.077-2.12 0 0 .67-.215 2.195.82a7.626 7.626 0 012-.27 7.63 7.63 0 012 .27c1.525-1.035 2.195-.82 2.195-.82.434 1.103.16 1.918.078 2.12.512.56.823 1.274.823 2.148 0 3.075-1.87 3.753-3.654 3.948.287.25.543.737.543 1.485 0 1.07-.01 1.933-.01 2.197 0 .213.146.463.55.384A8.001 8.001 0 008 .198z"></path>
-                  </svg>
-                  Sourcecode
-                </button>
-                <button class="flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-gray-200 rounded-lg hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-500">
-                  <svg class="w-5 h-5 mr-2" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.498 6.186c-.273-.993-1.077-1.777-2.064-2.064C19.464 3.747 12 3.747 12 3.747s-7.464 0-9.434.375C1.58 4.51.776 5.293.503 6.286.131 7.916 0 12 0 12s.131 4.084.503 5.713c.273.993 1.077 1.777 2.064 2.064 1.97.375 9.434.375 9.434.375s7.464 0 9.434-.375c.987-.287 1.791-1.071 2.064-2.064C23.869 16.084 24 12 24 12s-.131-4.084-.502-5.714zm-14.65 9.61V8.204l6.416 3.796-6.416 3.796z"></path>
-                  </svg>
-                  Demo
-                </button>
-              </div>
+      <div class="content">
+        <div class="card">
+            <img src="./project1/banner.jpg" alt="Banner Image">
+            <div class="card-body">
+                <h5>Student Management System</h5>
+                <p>
+                  Introducing the Student Management System of the ABC campus. Actually, we built this system as a retrofit to our 
+                  existing university SIS. In fact, we used the PHP stack to develop this entire project. Which means HTML, CSS, and 
+                  JavaScript for the front end, PHP for the back end, and MySql for the database.
+                </p>
+                
+                <div class="button-group">
+                    <a href="https://github.com/Cyber-III/Student-Management-System" target="_blank" class="sourcecode">
+                        <svg class="w-5 h-5" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 .198a8 8 0 00-2.53 15.61c.4.07.547-.173.547-.386 0-.19-.007-.693-.01-1.36-2.225.483-2.695-1.072-2.695-1.072-.364-.922-.89-1.167-.89-1.167-.728-.498.055-.488.055-.488.805.057 1.228.827 1.228.827.715 1.224 1.874.87 2.33.665.072-.518.28-.87.51-1.07-1.777-.2-3.644-.888-3.644-3.956 0-.874.313-1.588.823-2.148-.082-.202-.357-1.017.077-2.12 0 0 .67-.215 2.195.82a7.626 7.626 0 012-.27 7.63 7.63 0 012 .27c1.525-1.035 2.195-.82 2.195-.82.434 1.103.16 1.918.078 2.12.512.56.823 1.274.823 2.148 0 3.075-1.87 3.753-3.654 3.948.287.25.543.737.543 1.485 0 1.07-.01 1.933-.01 2.197 0 .213.146.463.55.384A8.001 8.001 0 008 .198z"></path>
+                        </svg>
+                        Sourcecode
+                    </a>
+                    <a href="" target="_blank" class="demo">
+                        <svg class="w-5 h-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.498 6.186c-.273-.993-1.077-1.777-2.064-2.064C19.464 3.747 12 3.747 12 3.747s-7.464 0-9.434.375C1.58 4.51.776 5.293.503 6.286.131 7.916 0 12 0 12s.131 4.084.503 5.713c.273.993 1.077 1.777 2.064 2.064 1.97.375 9.434.375 9.434.375s7.464 0 9.434-.375c.987-.287 1.791-1.071 2.064-2.064C23.869 16.084 24 12 24 12s-.131-4.084-.502-5.714zm-14.65 9.61V8.204l6.416 3.796-6.416 3.796z"></path>
+                        </svg>
+                        Demo
+                    </a>
+                </div>
             </div>
-          </a>
         </div>
+    </div>
         
     </div>
     
@@ -199,7 +309,7 @@
     <div class="projects-btn text-center mt-20 mb-4">
       <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
         <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-        <a href="https://github.com/RamithaHeshan33">See More</a>
+        <a href="https://github.com/RamithaHeshan33" target="_blank">See More</a>
         </span>
       </button>
     </div>
@@ -222,19 +332,19 @@
       </div>
           <div class="blogs-content mt-7">
             <div class="card max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
+                <a href="https://medium.com/@ramitha33/how-to-kill-a-process-running-on-port-number-8080-1f4ff9cbb8dc" target="_blank">
                     <img class="rounded-t-lg" src="main.jpg" alt="" />
                 </a>
                 <div class="p-5">
-                    <a href="#">
+                    <a href="https://medium.com/@ramitha33/how-to-kill-a-process-running-on-port-number-8080-1f4ff9cbb8dc" target="_blank">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Noteworthy technology acquisitions 2021
+                            How to kill a process running on 8080 port
                         </h5>
                     </a>
                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                      In Spring Boot, port 8080 is the default port that the embedded Tomcat server uses to serve web applications. When you run...
                     </p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <a href="https://medium.com/@ramitha33/how-to-kill-a-process-running-on-port-number-8080-1f4ff9cbb8dc" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Read more
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -242,21 +352,21 @@
                     </a>
                 </div>
             </div>
-            <!-- Duplicate the above card for the remaining cards -->
+
             <div class="card max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
+                <a href="https://medium.com/@ramitha33/how-to-change-the-verified-name-in-coursera-698494d98ebc" target="_blank">
                     <img class="rounded-t-lg" src="main2.jpg" alt="" />
                 </a>
                 <div class="p-5">
-                    <a href="#">
+                    <a href="https://medium.com/@ramitha33/how-to-change-the-verified-name-in-coursera-698494d98ebc" target="_blank">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Noteworthy technology acquisitions 2021
+                            How to change verified name in Cousera
                         </h5>
                     </a>
                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                      Ifyou are a student on the Coursera platform, you might face this problem. My name is J.F. Ramita Heshan. However,...
                     </p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <a href="https://medium.com/@ramitha33/how-to-change-the-verified-name-in-coursera-698494d98ebc" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Read more
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -266,19 +376,19 @@
             </div>
 
             <div class="card max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
+                <a href="https://medium.com/@ramitha33/how-to-open-a-fxml-file-in-netbeans-704fc27c4fbc" target="_blank">
                     <img class="rounded-t-lg" src="main3.jpg" alt="" />
                 </a>
                 <div class="p-5">
-                    <a href="#">
+                    <a href="https://medium.com/@ramitha33/how-to-open-a-fxml-file-in-netbeans-704fc27c4fbc" target="_blank">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Noteworthy technology acquisitions 2021
+                            How to open fxml file in NetBeans
                         </h5>
                     </a>
                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                      If you are new to Java FX, you might be facing this trouble. You cannot see the open button when right-clicking on your...
                     </p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <a href="https://medium.com/@ramitha33/how-to-open-a-fxml-file-in-netbeans-704fc27c4fbc" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Read more
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -288,19 +398,19 @@
             </div>
 
             <div class="card max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
+              <a href="https://medium.com/@ramitha33/how-to-create-a-pull-request-template-for-your-github-repository-bc5141fa385e" target="_blank">
                   <img class="rounded-t-lg" src="main4.jpg" alt="" />
               </a>
               <div class="p-5">
-                  <a href="#">
+                  <a href="https://medium.com/@ramitha33/how-to-create-a-pull-request-template-for-your-github-repository-bc5141fa385e" target="_blank">
                       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          Noteworthy technology acquisitions 2021
+                          How to create pull request template
                       </h5>
                   </a>
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                    GitHub is a web-based platform built for developers to collaborate on projects using Git, a distributed version control system. It...
                   </p>
-                  <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <a href="https://medium.com/@ramitha33/how-to-create-a-pull-request-template-for-your-github-repository-bc5141fa385e" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                       Read more
                       <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -310,19 +420,19 @@
             </div>
 
             <div class="card max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
+              <a href="https://medium.com/@ramitha33/how-to-change-the-jdk-version-in-netbeans-55d9cbb8b773" target="_blank">
                   <img class="rounded-t-lg" src="main5.jpg" alt="" />
               </a>
               <div class="p-5">
-                  <a href="#">
+                  <a href="https://medium.com/@ramitha33/how-to-change-the-jdk-version-in-netbeans-55d9cbb8b773" target="_blank">
                       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          Noteworthy technology acquisitions 2021
+                        How to change the JDK version in NetBeans.
                       </h5>
                   </a>
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                    Sometimes, we have to change the Java Development Kit (JDK) version for different purposes. This article explains how to do it...
                   </p>
-                  <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <a href="https://medium.com/@ramitha33/how-to-change-the-jdk-version-in-netbeans-55d9cbb8b773" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                       Read more
                       <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -332,19 +442,19 @@
             </div>
             
             <div class="card max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
-                  <img class="rounded-t-lg" src="main.jpg" alt="" />
+              <a href="https://medium.com/@ramitha33/what-are-the-oop-concepts-5e60098e82c6" target="_blank">
+                  <img class="rounded-t-lg" src="OOP.jpg" alt="" />
               </a>
               <div class="p-5">
-                  <a href="#">
+                  <a href="https://medium.com/@ramitha33/what-are-the-oop-concepts-5e60098e82c6" target="_blank">
                       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          Noteworthy technology acquisitions 2021
+                        What are the Object Oriented Concepts
                       </h5>
                   </a>
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                    Object-Oriented Programming (OOP) is a programming paradigm centered around “objects,” which can be considered...
                   </p>
-                  <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <a href="https://medium.com/@ramitha33/what-are-the-oop-concepts-5e60098e82c6" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                       Read more
                       <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2 ml-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />

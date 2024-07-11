@@ -177,7 +177,16 @@ header.shadow {
     margin-left: 1rem;
   }
 
+  .content img {
+    width: 596px;
+    height: auto;
+  }
 
+  
+
+  .blogs .card {
+    flex-direction: column;
+  }
 
   .blogs .heading {
     margin-top: -3rem;
@@ -185,16 +194,16 @@ header.shadow {
 
   .blogs-content {
     display: flex;
-    flex-wrap: wrap; /* Allows cards to wrap to the next line if the container is too small */
-    gap: 20px; /* Space between the cards */
-    justify-content: space-around; /* Distributes space between items */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
   }
   
   .card {
-    flex: 1 1 calc(33.333% - 20px); /* Adjusts the width of each card to fit three per row */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    margin-bottom: 20px; /* Adds space between rows */
-    max-width: 300px; /* Ensures cards don't get too wide */
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    max-width: 300px;
   }
 
 
