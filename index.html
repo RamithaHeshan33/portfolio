@@ -8,7 +8,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
     <!-- Tailwind CSS (required for Flowbite) -->
@@ -16,91 +16,10 @@
     <!-- Flowbite CSS -->
     <link href="https://unpkg.com/flowbite@1.6.5/dist/flowbite.min.css" rel="stylesheet">
 
-    <style>
-      .content {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 20px;
-      }
-
-      .card {
-          display: flex;
-          text-align: justify;
-          background-color: white;
-          border: 1px solid #e5e7eb;
-          border-radius: 8px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          width: 100%;
-          max-width: 1200px;
-          margin: auto;
-          overflow: hidden;
-      }
-
-      .card img {
-          /* width: 100%; */
-          height: auto;
-      }
-
-      .card-body {
-          display: flex;
-          flex-direction: column;
-          padding: 20px;
-          gap: 20px;
-      }
-
-      .card-body h5 {
-          font-size: 1.5rem;
-          font-weight: bold;
-          color: #1f2937;
-      }
-
-      .card-body p {
-          color: #4b5563;
-      }
-
-      .button-group {
-          display: flex;
-          gap: 10px;
-      }
-
-      .button-group a {
-          display: flex;
-          align-items: center;
-          padding: 10px 20px;
-          font-size: 0.875rem;
-          font-weight: medium;
-          color: white;
-          border-radius: 6px;
-      }
-
-      .button-group a.sourcecode {
-          background-color: #3b82f6;
-      }
-
-      .button-group a.sourcecode:hover {
-          background-color: #2563eb;
-      }
-
-      .button-group a.demo {
-          background-color: #374151;
-      }
-
-      .button-group a.demo:hover {
-          background-color: #1f2937;
-      }
-
-      .button-group svg {
-          margin-right: 10px;
-      }
-  </style>
-
 
 </head>
 <body>
     <!-- Navbar -->
-    
-
     <nav class="bg-white border-gray-200 dark:bg-gray-900 fixed w-full top-0 left-0 z-50">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#home" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -161,7 +80,7 @@
 
             <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
               <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-              <a href="#portfolio">Explore Projects</a>
+              <a href="#projects">Explore Projects</a>
               </span>
             </button>
               
@@ -248,22 +167,21 @@
 
       <div class="content">
         <div class="card">
-            <img src="./project1/banner.jpg" alt="Banner Image">
+            <img src="./project2/drivesaviour.png" alt="Banner Image">
             <div class="card-body">
-                <h5>Student Management System</h5>
+                <h5>DriveSaviour</h5>
                 <p>
-                  Introducing the Student Management System of the ABC campus. Actually, we built this system as a retrofit to our existing 
-                  university SIS. In fact, we used the PHP stack to develop this entire project. Which means HTML, CSS, and JavaScript for 
-                  the front end, PHP for the back end, and MySql for the database.
+                  DriveSaviour is an online automobile product-selling platform. Also, this project provides a service to connect vehicle 
+                  owners with mechanics. This group project is developed using PHP, HTML, CSS, JavaScript and MySQL.
                 </p>
                 <div class="button-group">
-                    <a href="https://github.com/Cyber-III/Student-Management-System" target="_blank" class="sourcecode">
+                    <a href="https://github.com/SenzCode/DriveSaviour" target="_blank" class="sourcecode">
                         <svg class="w-5 h-5" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 .198a8 8 0 00-2.53 15.61c.4.07.547-.173.547-.386 0-.19-.007-.693-.01-1.36-2.225.483-2.695-1.072-2.695-1.072-.364-.922-.89-1.167-.89-1.167-.728-.498.055-.488.055-.488.805.057 1.228.827 1.228.827.715 1.224 1.874.87 2.33.665.072-.518.28-.87.51-1.07-1.777-.2-3.644-.888-3.644-3.956 0-.874.313-1.588.823-2.148-.082-.202-.357-1.017.077-2.12 0 0 .67-.215 2.195.82a7.626 7.626 0 012-.27 7.63 7.63 0 012 .27c1.525-1.035 2.195-.82 2.195-.82.434 1.103.16 1.918.078 2.12.512.56.823 1.274.823 2.148 0 3.075-1.87 3.753-3.654 3.948.287.25.543.737.543 1.485 0 1.07-.01 1.933-.01 2.197 0 .213.146.463.55.384A8.001 8.001 0 008 .198z"></path>
                         </svg>
                         Code
                     </a>
-                    <a href="" target="_blank" class="demo">
+                    <a href="https://youtu.be/rDYYBgbuezA?si=yVdHPODkzJjvApLY" target="_blank" class="demo">
                         <svg class="w-5 h-5" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M23.498 6.186c-.273-.993-1.077-1.777-2.064-2.064C19.464 3.747 12 3.747 12 3.747s-7.464 0-9.434.375C1.58 4.51.776 5.293.503 6.286.131 7.916 0 12 0 12s.131 4.084.503 5.713c.273.993 1.077 1.777 2.064 2.064 1.97.375 9.434.375 9.434.375s7.464 0 9.434-.375c.987-.287 1.791-1.071 2.064-2.064C23.869 16.084 24 12 24 12s-.131-4.084-.502-5.714zm-14.65 9.61V8.204l6.416 3.796-6.416 3.796z"></path>
                         </svg>
