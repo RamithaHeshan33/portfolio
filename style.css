@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    /* backdrop-filter: blur(50px); */
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nav {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 .content {
     display: flex;
     justify-content: center;
@@ -12,8 +22,7 @@
 .card {
     display: flex;
     text-align: justify;
-    background-color: white;
-    border: 1px solid #e5e7eb;
+    border: 2px solid #e5e7eb;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -78,3 +87,21 @@
 .button-group svg {
     margin-right: 10px;
 }
+
+/* Video Styles */
+#background-video {
+    position: fixed; /* Sticks the video to the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Covers the entire screen without distortion */
+    z-index: -1; /* Places video behind the content */
+  }
+  
+  /* Content Styles */
+  .contents {
+    position: relative;
+    z-index: 1;
+  }
+  
