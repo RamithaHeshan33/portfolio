@@ -17,6 +17,14 @@
     margin-top: 10px;
 }
 
+#repo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+
 @keyframes smoothShake {
     0% { transform: translate(0, 0); }
     25% { transform: translate(-3px, 3px) rotate(-2deg); }
@@ -30,7 +38,7 @@
     animation: smoothShake 1s ease-in-out infinite;
   }
   
-  
+
 
 
 
